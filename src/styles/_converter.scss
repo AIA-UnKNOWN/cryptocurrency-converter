@@ -1,0 +1,139 @@
+.converter {
+	background: $black2;
+	box-shadow: 0 0 20px $black1;
+	padding: 40px 20px;
+	width: 400px;
+
+	.title {
+		color: $lightgray;
+		font-size: 26px;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	.field {
+		border: 4px solid $gray;
+		padding: 2px;
+		border-radius: 10px;
+		margin: 20px 0;
+		width: 360px;
+		position: relative;
+
+		.container {
+			@include flex( space-between, center );
+		}
+
+		::placeholder {
+			color: $lightgray;
+		}
+
+		.value {
+			color: $lightgray;
+			background: none;
+			outline: none;
+			font-size: 16px;
+			width: 100%;
+			line-height: 40px;
+			padding-left: 15px;
+			border: none;
+
+			&::-webkit-outer-spin-button,
+			&::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+		}
+
+		.crypto-selection {
+			background: $gray;
+			padding: 15px 20px;
+			border-radius: 7px;
+			@include flex( space-between, center );
+			position: relative;
+
+			.cryptocurrency {
+				font-size: 14px;
+				color: $black3;
+			}
+
+			i {
+				margin-left: 10px;
+				margin-top: -8px;
+			}
+		}
+
+		.currencies-container {
+			display: none;
+			background: $lightgray;
+			position: absolute;
+			right: 0;
+			top: 45px;
+			z-index: 1;
+			width: 97px;
+			border-radius: 5px;
+			max-height: 300px;
+			overflow-y: auto;
+
+			ul {
+
+				li {
+					list-style: none;
+					text-align: center;
+					line-height: 40px;
+					border-radius: 5px;
+	
+					&:hover {
+						background: $gray;
+						color: $black2;
+					}
+	
+					label {
+						width: 100%;
+						height: 100%;
+						display: block;
+					}
+				}
+			}
+		}
+	}
+
+	#other-currency-selection-toggler-for-from,
+	#other-currency-selection-toggler-for-to {
+		display: none;
+
+		&:checked ~ .currencies-container {
+			display: block;
+		}
+	}
+
+	.warning {
+		background: $lightgold;
+		border-radius: 10px;
+		padding: 10px;
+		margin: 10px 0 20px;
+
+		.title {
+			color: $darkgold;
+			font-size: 12px;
+			font-weight: bold;
+			margin-bottom: 5px;
+		}
+
+		.message {
+			text-align: center;
+			color: $darkgold;
+			font-size: 11px;
+		}
+	}
+
+	.convert-button {
+		background: linear-gradient( to bottom right, $gold1, $gold2 );
+		border: none;
+		display: block;
+		width: 100%;
+		padding: 20px;
+		font-weight: bold;
+		color: $darkgold;
+		border-radius: 10px;
+	}
+}
