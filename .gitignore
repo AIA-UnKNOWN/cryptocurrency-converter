@@ -1,2 +1,4 @@
+# These are the folders that are generated so
+# it shoudn't be commited
 node_modules/
 dist/
