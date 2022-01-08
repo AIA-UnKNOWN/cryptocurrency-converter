@@ -19,6 +19,14 @@
 		width: 360px;
 		position: relative;
 
+		&.to {
+			border: 4px solid $lightgreen;
+
+			.value {
+				color: $lightgreen;
+			}
+		}
+
 		.container {
 			@include flex( space-between, center );
 		}
