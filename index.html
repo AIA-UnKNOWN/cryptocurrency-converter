@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cryptocurrency Converter</title>
+	<script src="https://kit.fontawesome.com/019434cc62.js" crossorigin="anonymous"></script>
+<script defer src="main.bundle.js"></script></head>
+<body>
+
+	<div class="app">
+
+		<div class="note">
+			<p class="title">Note</p>
+			<p class="message">
+				To make this work, you need to download a chrome extension
+				<a id="chrome-extension" href="https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc" target="_blank">Moesif Origin & CORS Changer</a>
+				to make it work properly and turn if on. After using it, just turn it off.
+		</div>
+
+		<div class="converter">
+			<p class="title">Cryptocurrency Converter</p>
+
+			<div class="field from">
+				<div class="container">
+					<input type="number" name="from-value" id="from-value" placeholder="Convert from..." class="value">
+					<label for="other-currency-selection-toggler-for-from" class="crypto-selection">
+						<p class="cryptocurrency">N/A</p>
+						<i class="fas fa-sort-down"></i>
+					</label>
+				</div>
+
+				<input type="checkbox" id="other-currency-selection-toggler-for-from">
+				<div class="currencies-container">
+					<ul class="currencies"></ul>
+				</div>
+			</div>
+
+			<div class="field to">
+				<div class="container">
+					<input type="number" name="to-value" id="to-value" placeholder="Result to..." class="value" readonly>
+					<label for="other-currency-selection-toggler-for-to" class="crypto-selection">
+						<p class="cryptocurrency">N/A</p>
+						<i class="fas fa-sort-down"></i>
+					</label>
+				</div>
+
+				<input type="checkbox" id="other-currency-selection-toggler-for-to">
+				<div class="currencies-container">
+					<ul class="currencies"></ul>
+				</div>
+			</div>
+
+			<div class="warning">
+				<p class="title">
+					<i class="fas fa-exclamation-triangle"></i> WARNING
+				</p>
+				<p class="message">
+					Cryptocurrencies are extremely volatile and data that will be shown here may not be the price in just few minutes so always check for the real-time prices in <a href="https://coinmarketcap.com/homepage-v21/" target="_blank" class="coinmarketcap">coinmarketcap.com</a> for more accuracy
+				</p>
+			</div>
+
+			<button class="convert-button">CONVERT</button>
+		</div>
+
+	</div>
+	
+</body>
+</html>
