@@ -1,4 +1,6 @@
 import './style.scss';
+import env from './env.js';
+
 
 (function() {
 
@@ -12,16 +14,12 @@ const fromCurrencies = document.querySelector( '.field.from .currencies' );
 const toCurrencies = document.querySelector( '.field.to .currencies' );
 const convertButton = document.querySelector( '.convert-button' );
 
-const api = {
-	key: 'ae76cc66-a8e0-4a80-941f-4e62a8ad8f74'
-};
-
 async function request( method, url ) {
 	return await fetch( url, {
 		method: method,
 		headers: {
 			'Accept': 'application/json',
-			'X-CMC_PRO_API_KEY': api.key
+			'X-CMC_PRO_API_KEY': env.API_KEY
 		}
 	});
 }

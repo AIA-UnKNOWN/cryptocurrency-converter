@@ -2,3 +2,4 @@
 # it shoudn't be commited
 node_modules/
 dist/
+src/env.js
